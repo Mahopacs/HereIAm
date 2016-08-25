@@ -3,7 +3,7 @@
 AppRate.preferences = {
     useLanguage: 'en',
     openStoreInApp: true,
-    displayAppName: 'My custom app title',
+    displayAppName: 'Here I Am',
     usesUntilPrompt: 5,
     promptAgainForEachNewVersion: false,
     storeAppURL: {
