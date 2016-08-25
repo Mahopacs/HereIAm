@@ -8,7 +8,7 @@ AppRate.preferences = {
     promptAgainForEachNewVersion: false,
     storeAppURL: {
         ios: '<my_app_id>',
-        android: 'market://details?id=<package_name>',
+        android: 'market://details?id=com.tedjyoung.hereiam',
         windows: 'ms-windows-store://pdp/?ProductId=<the apps Store ID>',
         blackberry: 'appworld://content/[App Id]/',
         windows8: 'ms-windows-store:Review?name=<the Package Family Name of the application>'
@@ -22,9 +22,21 @@ AppRate.preferences = {
     }
 };
 
+AppRate.preferences = {
+    useCustomRateDialog: true,
+    callbacks: {
+        onRateDialogShow: function (callback) {
+            callback(1) // cause immediate click on 'Rate Now' button 
+        },
+        onButtonClicked: function (buttonIndex) {
+            console.log("onButtonClicked -> " + buttonIndex);
+        }
+    }
+};
+
 function rateHereIAm() {
     try {
-        AppRate.promptForRating();
+        AppRate.promptForRating(false);
     } catch (e) {
         alert("Error rating app.  Error = " + e.message);
     }

@@ -7,4 +7,8 @@
   <PropertyGroup>
     <ReferenceCachePath>C:\Users\tedyoung\AppData\Local\Temp\AlertMe_refcache</ReferenceCachePath>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Android'">
+    <DebuggerFlavor>AndroidEmulator</DebuggerFlavor>
+    <AndroidEmulatorID>AndroidDevice;Device</AndroidEmulatorID>
+  </PropertyGroup>
 </Project>
